@@ -1,0 +1,166 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>农业系统 · 自然幻想</title>
+<link rel="stylesheet" href="assets/style.css?v=60">
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a class="logo" href="index.html">自然幻想<span>NATURAL FANTASY</span></a>
+    <nav class="links">
+      <a href="index.html#world">场景</a>
+      <a href="combat.html">战斗</a>
+      <a href="index.html#systems">休闲</a>
+      <a href="planting.html">农业</a>
+      <a href="npc.html">NPC</a>
+      <a href="index.html#about">关于</a>
+    </nav>
+  </div>
+</header>
+
+<section class="page-head">
+  <div class="page-head-inner">
+    <span class="tag">休闲玩法 / 农业</span>
+    <h1>种植与作物</h1>
+    <p>翻土、播种、浇水、施肥，作物会随时间生长；收获后可以直接拿去厨房。</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="split">
+    <div class="split-media"><img src="assets/img/farm.jpg" alt="农田"></div>
+    <div class="split-body">
+      <span class="tag">流程</span>
+      <h2>从一块空地开始</h2>
+      <ul class="dots">
+        <li>翻土后播种，拖动种子进入耕地</li>
+        <li>浇水、施肥，缺水时会出现提示</li>
+        <li>作物经历四个生长阶段</li>
+        <li>成熟后收获，进入背包</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section">
+  <div class="section-head">
+    <span class="tag">生长阶段</span>
+    <h2>从幼苗到成熟</h2>
+    <p>以西红柿为例，四个阶段的形态变化。</p>
+  </div>
+  <div class="crops stages">
+    <figure class="crop"><img src="assets/crops/tomato_1.png" alt="西红柿阶段1"><span>阶段 1</span></figure>
+    <figure class="crop"><img src="assets/crops/tomato_2.png" alt="西红柿阶段2"><span>阶段 2</span></figure>
+    <figure class="crop"><img src="assets/crops/tomato_3.png" alt="西红柿阶段3"><span>阶段 3</span></figure>
+    <figure class="crop"><img src="assets/crops/tomato_4.png" alt="西红柿阶段4"><span>阶段 4 · 成熟</span></figure>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <span class="tag">演示</span>
+    <h2>完整种植流程</h2>
+    <p>翻土、播种、浇水、施肥到成熟收获。</p>
+  </div>
+  <div class="video-grid three">
+    <article class="vcard">
+      <video src="assets/video/farm_stages.mp4?v=20261111d" autoplay muted loop playsinline preload="metadata"></video>
+      <div class="vcard-body"><h3>所有阶段</h3><p>从整地到不同作物的生长阶段展示。</p></div>
+    </article>
+    <article class="vcard">
+      <video src="assets/video/farm_mature.mp4?v=20261111d" autoplay muted loop playsinline preload="metadata"></video>
+      <div class="vcard-body"><h3>普通全熟</h3><p>只浇水不施肥，收 1–5 个。</p></div>
+    </article>
+    <article class="vcard">
+      <video src="assets/video/farm_perfect.mp4?v=20261111d" autoplay muted loop playsinline preload="metadata"></video>
+      <div class="vcard-body"><h3>完美全熟</h3><p>每阶段施肥再浇满水，收 3–10 个。</p></div>
+    </article>
+  </div>
+
+  <div class="yield-note">
+    <h3>普通全熟和完美全熟，差在哪</h3>
+    <p>每个生长阶段要浇 3 次水。浇水时这一格如果施过肥，这一次就算“带肥”；肥效只管当前阶段，进入下一阶段要重新施。</p>
+    <div class="yield-rules">
+      <div><span>3 次水全部带肥</span><b>1 天过一阶段</b></div>
+      <div><span>少一次没带肥</span><b>2 天过一阶段</b></div>
+      <div><span>4 个阶段全程带肥</span><b>收获判定为完美</b></div>
+    </div>
+  </div>
+
+  <div class="cards two">
+    <article class="card">
+      <div class="card-body">
+        <span class="tag">普通全熟</span>
+        <h3>能收，但产量看脸</h3>
+        <p>每个阶段都不施肥，一轮要 8 天。多产作物收获 1–5 个，权重压在 1–2 个上；卷心菜、南瓜这类固定只收 1 个。</p>
+      </div>
+    </article>
+    <article class="card">
+      <div class="card-body">
+        <span class="tag">完美全熟</span>
+        <h3>快一倍，保底 3 个</h3>
+        <p>每个阶段先施肥、再浇满 3 次水，一轮 4 天。多产作物收获 3–10 个，大多数落在 5–6 个；固定单产作物只是成熟更快。</p>
+      </div>
+    </article>
+  </div>
+  <p class="yield-foot">多产作物只有西红柿、草莓、西葫芦、哈密瓜、黄星果。成熟后 3 天不采会烂掉并掉落腐烂果实；连续 2 天不浇水会枯死，这一季就白种了。</p>
+</section>
+
+<section class="section dark">
+  <div class="split">
+    <div class="split-media crop-single"><video src="assets/video/farm_dead.mp4?v=20261111e" poster="assets/crops/dead.png" autoplay muted loop playsinline preload="metadata"></video></div>
+    <div class="split-body">
+      <span class="tag">枯死</span>
+      <h2>缺水会枯死</h2>
+      <p>长时间不浇水，作物会进入枯死状态，这一季就白种了。</p>
+      <ul class="dots">
+        <li>缺水时会出现提示</li>
+        <li>枯死后需要重新播种</li>
+        <li>浇水、施肥都要玩家自己来</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section essay">
+  <div class="essay-inner">
+    <span class="tag">设计思路</span>
+    <h2>种植是经济和烹饪的起点</h2>
+    <div class="essay-body">
+      <p>农业不是单独的“收菜玩法”，它更像小镇的底层循环：种出来的菜可以卖，也可以直接拿进厨房。</p>
+      <p>完整的一轮是：翻土、播种、浇水、施肥，等作物进入下一阶段，成熟后收获。水肥都要玩家自己来，缺水会有提示；长时间不管，作物会枯死，这一季就要重新播种。</p>
+      <p>作物按四个阶段生长，部分作物可以多次收获。种什么、什么时候种，会变成一个小规划，而不是到点自动收菜。</p>
+      <p>收获之后进背包，接上烹饪和 NPC 口味。这条链让种田不是孤立的系统，而是经济和日常的一部分。</p>
+      <p>后续也可以继续加作物、季节和更多加工方式，这块留了扩展空间。</p>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <p><a href="index.html">← 返回首页</a> · © 2026 自然幻想</p>
+</footer>
+
+<div class="lightbox" id="lightbox" hidden>
+  <div class="lightbox-panel">
+    <button class="lightbox-close" aria-label="关闭">×</button>
+    <video id="lightbox-video" controls playsinline></video>
+    <div class="lightbox-cap" id="lightbox-cap"></div>
+  </div>
+</div>
+<script src="assets/video-modal.js?v=20261111m"></script>
+<div class="imagelightbox" id="imagelightbox" hidden>
+  <button class="lightbox-close" aria-label="关闭">×</button>
+  <div class="imagelightbox-panel">
+    <img id="imagelightbox-img" alt="">
+    <div class="lightbox-cap" id="imagelightbox-cap"></div>
+  </div>
+</div>
+<script src="assets/image-modal.js"></script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NPC 系统 · 自然幻想</title>
+<link rel="stylesheet" href="assets/style.css?v=60">
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a class="logo" href="index.html">自然幻想<span>NATURAL FANTASY</span></a>
+    <nav class="links">
+      <a href="index.html#world">场景</a>
+      <a href="combat.html">战斗</a>
+      <a href="index.html#systems">休闲</a>
+      <a href="planting.html">农业</a>
+      <a href="npc.html">NPC</a>
+      <a href="index.html#about">关于</a>
+    </nav>
+  </div>
+</header>
+
+<section class="page-head">
+  <div class="page-head-inner">
+    <span class="tag">NPC 系统</span>
+    <h1>不只是背台词</h1>
+    <p>每个 NPC 有自己的人设、职业和记忆。对话由本地逻辑与 DeepSeek API 共同生成，既保留角色感，也不会答得离谱。</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="video-grid">
+    <article class="vcard">
+      <video src="assets/video/npc_dialog.mp4?v=20261111d" autoplay muted loop playsinline preload="metadata"></video>
+      <div class="vcard-body"><h3>对话与立绘</h3><p>剧情对话、表情立绘与选项，保持角色原本的语气。</p></div>
+    </article>
+    <article class="vcard">
+      <video src="assets/video/npc_ai.mp4?v=20261111d" autoplay muted loop playsinline preload="metadata"></video>
+      <div class="vcard-body"><h3>AI 自由问答</h3><p>玩家可以输入任意问题，NPC 会按人设和当前上下文作答。</p></div>
+    </article>
+  </div>
+</section>
+
+<section class="section">
+  <div class="split">
+    <div class="split-media">
+      <img src="assets/img/ai_settings.jpg" alt="AI 设置界面">
+    </div>
+    <div class="split-body">
+      <span class="tag">AI 配置</span>
+      <h2>模型、Key 与成本</h2>
+      <p>接的是 DeepSeek 的 deepseek-chat，Key 只存在本机，用 Windows 用户级 DPAPI 加密。</p>
+      <ul class="dots">
+        <li>厂商预设、接口地址、模型名可切换</li>
+        <li>Key 加密保存，不写进脚本</li>
+        <li>界面直接显示调用次数、token 与预估成本</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section dark">
+  <div class="section-head">
+    <span class="tag">实现方式</span>
+    <h2>一句话怎么变成回答</h2>
+    <p>本地逻辑先处理人设、记忆与兜底，再决定是否请求模型。</p>
+  </div>
+  <div class="diagram">
+    <div class="node"><b>玩家输入</b><span>自由文本</span></div>
+    <div class="arrow">→</div>
+    <div class="node"><b>本地对话逻辑</b><span>人设 / 记忆 / 兜底</span></div>
+    <div class="arrow">→</div>
+    <div class="node"><b>DeepSeek API</b><span>生成回复</span></div>
+    <div class="arrow">→</div>
+    <div class="node"><b>NPC 回复</b><span>立绘 + 语音</span></div>
+  </div>
+</section>
+
+<section class="section essay">
+  <div class="essay-inner">
+    <span class="tag">设计思路</span>
+    <h2>NPC 不只是背台词</h2>
+    <div class="essay-body">
+      <p>固定台词只能撑过第一次对话；完全交给大模型，又会答偏、延迟、成本失控。</p>
+      <p>所以对话先过本地逻辑：由它决定“说什么、什么时候说”，模型只负责在角色人设内组织语言。</p>
+      <p>每个 NPC 有人设、职业和记忆，作为上下文；请求失败走本地兜底；回复长度和调用频率都做了限制。NPC 之间也会互相聊天，不只对玩家说话。</p>
+      <p>玩家可以自由提问，NPC 仍然像小镇居民。配置页里能看到调用次数、token 和预估成本，预算可控。</p>
+      <p>取舍上，没有用本地小模型，选了 API + 兜底，优先稳定和开发速度；这也让后续换模型、加 NPC 更容易。</p>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <p><a href="index.html">← 返回首页</a> · © 2026 自然幻想</p>
+</footer>
+
+<div class="lightbox" id="lightbox" hidden>
+  <div class="lightbox-panel">
+    <button class="lightbox-close" aria-label="关闭">×</button>
+    <video id="lightbox-video" controls playsinline></video>
+    <div class="lightbox-cap" id="lightbox-cap"></div>
+  </div>
+</div>
+<script src="assets/video-modal.js?v=20261111m"></script>
+</body>
+</html>
+

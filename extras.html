@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>其余功能 · 自然幻想</title>
+<link rel="stylesheet" href="assets/style.css?v=60">
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a class="logo" href="index.html">自然幻想<span>NATURAL FANTASY</span></a>
+    <nav class="links">
+      <a href="index.html#world">场景</a>
+      <a href="combat.html">战斗</a>
+      <a href="index.html#systems">休闲</a>
+      <a href="planting.html">农业</a>
+      <a href="npc.html">NPC</a>
+      <a href="index.html#about">关于</a>
+    </nav>
+  </div>
+</header>
+
+<section class="page-head">
+  <div class="page-head-inner">
+    <span class="tag">其余功能</span>
+    <h1>没展开的那些细节</h1>
+    <p>影子、睡觉、存档、NPC 心情气泡、商店收购和设置，六个不占主线、但每天都会用到的系统。</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="cards two extras-grid">
+    <article class="card">
+      <div class="card-media"><video src="assets/video/shadow_demo.mp4?v=20261111a" autoplay muted loop playsinline preload="metadata"></video></div>
+      <div class="card-body">
+        <span class="tag">场景 / 光照</span>
+        <h3>影子跟着时间走</h3>
+        <p>城镇里 1000 多片影子会随游戏内时间转向、变长；清晨和黄昏的光感不是一张滤镜。</p>
+        <p>影子不是手画的：运行时从精灵的可见像素描出剪影，按太阳角度做投影，新加的树和房子不用单独做影子资源。柔边用几张偏移的半透明副本叠出来，每帧只更新变换。</p>
+      </div>
+    </article>
+    <article class="card">
+      <div class="card-media"><video src="assets/video/sleep_demo.mp4?v=20261111a" autoplay muted loop playsinline preload="metadata"></video></div>
+      <div class="card-body">
+        <span class="tag">生活 / 时间</span>
+        <h3>睡一觉，第二天七点</h3>
+        <p>在床边确认后黑屏、日历 +1 天，醒来固定早上 7:00；BGM 从原位置继续。</p>
+        <p>黑屏不是硬切：0.35 秒压黑、停 2 秒、日期淡入、闹钟响、BGM 从原位置长淡入；同时自动存到 1 号槽，避免忘记存档。</p>
+      </div>
+    </article>
+    <article class="card">
+      <div class="card-media"><img src="assets/img/extra_save.jpg" alt="存档界面"></div>
+      <div class="card-body">
+        <span class="tag">存档</span>
+        <h3>4 个槽位，各自带缩略图</h3>
+        <p>位置、血量、背包、金币、时间、NPC 对话与送礼记忆都写进同一个存档。每个槽位有一张以玩家为中心的缩略图，覆盖前先留一份备份；自动存档写回上次用过的槽位。</p>
+      </div>
+    </article>
+    <article class="card">
+      <div class="card-media"><img src="assets/img/extra_emote.jpg" alt="NPC 心情气泡"></div>
+      <div class="card-body">
+        <span class="tag">NPC 心情</span>
+        <h3>头顶会冒表情</h3>
+        <p>30 种手绘表情，按权重随机挑：开心类权重大，生气和大哭很少出现。气泡大小跟着角色在屏幕上的身高缩放，走近走远都不会像一张贴纸。</p>
+      </div>
+    </article>
+    <article class="card">
+      <div class="card-media"><img src="assets/img/extra_shop.jpg" alt="商店收购页"></div>
+      <div class="card-body">
+        <span class="tag">商店</span>
+        <h3>鱼按四档收购</h3>
+        <p>收购页只收渔获：普通、稀有、史诗、传说四档各有价格，列表按价格从高到低排，卖之前能直接看到这一条值多少。</p>
+      </div>
+    </article>
+    <article class="card">
+      <div class="card-media"><img src="assets/img/extra_settings.jpg" alt="设置界面"></div>
+      <div class="card-body">
+        <span class="tag">设置</span>
+        <h3>音量、画面、亮度</h3>
+        <p>音效与音乐分开调，画面有档位，亮度单独一条；改完点应用就生效，不用重开。</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<footer class="footer">
+  <p><a href="index.html">← 返回首页</a> · © 2026 自然幻想</p>
+</footer>
+
+<div class="imagelightbox" id="imagelightbox" hidden>
+  <button class="lightbox-close" aria-label="关闭">×</button>
+  <div class="imagelightbox-panel">
+    <img id="imagelightbox-img" alt="">
+    <div class="lightbox-cap" id="imagelightbox-cap"></div>
+  </div>
+</div>
+<script src="assets/image-modal.js?v=20261111a"></script>
+</body>
+</html>

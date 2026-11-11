@@ -1,0 +1,262 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>自然幻想 · 世界与生活</title>
+<link rel="stylesheet" href="assets/style.css?v=60">
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a class="logo" href="index.html">自然幻想<span>NATURAL FANTASY</span></a>
+    <nav class="links">
+      <a href="#world">场景</a>
+      <a href="combat.html">战斗</a>
+      <a href="#systems">休闲</a>
+      <a href="planting.html">农业</a>
+      <a href="npc.html">NPC</a>
+      <a href="#about">关于</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-bg" style="background-image:url('assets/img/hero_ai.jpg')"></div>
+  <div class="hero-mask"></div>
+  <div class="hero-inner">
+    <p class="eyebrow">2027 届毕业设计作品 · 游戏 Demo</p>
+    <h1>自然幻想</h1>
+    <p class="hero-en">NATURAL FANTASY</p>
+    <p class="lead">一个会呼吸的像素世界：种田、做饭、钓鱼，<br>还有会自己聊天的 NPC。</p>
+    <div class="hero-actions">
+      <a class="btn primary" href="#combat">战斗系统</a>
+      <a class="btn ghost" href="#systems">休闲玩法</a>
+    </div>
+  </div>
+  <div class="hero-scroll">向下滚动</div>
+</section>
+
+<section id="world" class="section">
+  <div class="section-head">
+    <span class="tag">01 / 场景展示</span>
+    <h2>从清晨到深夜，小镇都在运转</h2>
+    <p>天气、时间、环境声与 BGM 会一起变化。同一个地方，不同时间来，气质完全不同。</p>
+  </div>
+  <div class="world-grid">
+    <figure class="shot wide">
+      <video src="assets/video/town_walk.mp4?v=20261111a" autoplay muted loop playsinline preload="metadata"></video>
+      <a class="shot-hit" href="weather.html" aria-label="查看天气系统"></a>
+      <span class="shot-badge">天气系统 →</span>
+      <figcaption>城镇 · 天气与时间</figcaption>
+    </figure>
+    <figure class="shot">
+      <video src="assets/video/beach_walk.mp4?v=20261111a" autoplay muted loop playsinline preload="metadata"></video>
+      <figcaption>海滩 · 白浪与浅水</figcaption>
+    </figure>
+    <div class="wave-note">
+      <span class="tag">海浪材质</span>
+      <h3>遮罩堆叠出的浪</h3>
+      <p>海面不是循环动画：原画拆成几层遮罩，再用同一张“离岸距离”驱动。</p>
+      <ul class="dots">
+        <li>海水遮罩 + 距离场：哪块是水、离岸多远</li>
+        <li>白浪层：按距离错开相位，浪线一层层推移</li>
+        <li>波光与焦散：加色叠加，亮度随浪起伏</li>
+      </ul>
+    </div>
+  </div>
+  <p class="world-note">同一张地图跟着游戏内时钟换光照：清晨、正午、黄昏、深夜的环境声与 BGM 都不一样。点开左侧大图，进入天气系统页。</p>
+</section>
+
+<section id="combat" class="section dark">
+  <div class="section-head">
+    <span class="tag">02 / 战斗系统</span>
+    <h2>一次输入，一套完整动作</h2>
+    <p>四向攻击、蓄力、冲刺与弹反；点进去可以看角色和怪物的完整技能组。</p>
+  </div>
+  <a class="feature" href="combat.html">
+    <div class="feature-media"><img src="assets/gifs/combat_attack.gif" alt="战斗"></div>
+    <div class="feature-body">
+      <h3>战斗系统</h3>
+      <p>四向攻击、蓄力拔刀斩、冲刺与弹反。弹反成功会打断敌人动作，失败则进入眩晕。</p>
+      <ul class="dots">
+        <li>四方向独立动作</li>
+        <li>蓄力 / 冲刺 / 弹反</li>
+        <li>敌人技能与护盾联动</li>
+      </ul>
+      <span class="card-cta">进入战斗系统 →</span>
+    </div>
+  </a>
+  <div class="subhead">
+    <h3>怪物图鉴</h3>
+    <p>从索敌、追击到技能释放，不同怪物承担不同的战斗压力。</p>
+  </div>
+<div class="monsters">
+    <article class="monster">
+      <div class="monster-media"><video src="assets/video/mob_skeleton.mp4?v=20261111d" autoplay muted loop playsinline preload="metadata"></video></div>
+      <div class="monster-body"><h3>骷髅兵</h3><p>近战追击，举盾时正面免伤，破盾后进入硬直。</p></div>
+    </article>
+    <article class="monster">
+      <div class="monster-media"><video src="assets/video/mob_archer.mp4?v=20261111d" autoplay muted loop playsinline preload="metadata"></video></div>
+      <div class="monster-body"><h3>骷髅射手</h3><p>保持距离，单发点射与散射压制。</p></div>
+    </article>
+    <article class="monster">
+      <div class="monster-media"><video src="assets/video/mob_mage.mp4?v=20261111d" autoplay muted loop playsinline preload="metadata"></video></div>
+      <div class="monster-body"><h3>法师</h3><p>火球、雷电范围技能，还能给周围怪物上护盾。</p></div>
+    </article>
+    <article class="monster">
+      <div class="monster-media"><video src="assets/video/mob_giant.mp4?v=20261111d" autoplay muted loop playsinline preload="metadata"></video></div>
+      <div class="monster-body"><h3>巨型僵尸</h3><p>跳跃砸地，落地前标出红圈；移动慢、伤害高。</p></div>
+    </article>
+  </div>
+</section>
+
+<section id="systems" class="section">
+  <div class="section-head">
+    <span class="tag">03 / 休闲玩法</span>
+    <h2>种田、钓鱼、做饭</h2>
+    <p>战斗之外，小镇还有另一套节奏：什么时候下竿，什么时候收火，都由你决定。</p>
+  </div>
+
+  <div class="cards two">
+    <a class="card card-link" href="cook.html">
+      <div class="card-media"><img src="assets/gifs/cook_toss.gif" alt="烹饪"></div>
+      <div class="card-body">
+        <h3>烹饪</h3>
+        <p>切菜、下锅、控火、卡点。火候太高会炒糊，炒糊之后还得自己清理灶台。</p>
+        <ul class="dots">
+          <li>灶台档位与温度</li>
+          <li>卡点加分、连击</li>
+          <li>失败状态也有完整表现</li>
+        </ul>
+      </div>
+    <span class="card-cta">进入烹饪详情 →</span>
+    </a>
+
+    <a class="card card-link" href="fish.html">
+      <div class="card-media"><img src="assets/gifs/fish_hook.gif" alt="钓鱼"></div>
+      <div class="card-body">
+        <h3>钓鱼</h3>
+        <p>抛竿之后要盯住浮标：鱼咬钩的瞬间提竿，错过就要重来。</p>
+        <ul class="dots">
+          <li>浮标判定窗口</li>
+          <li>不同水域不同鱼</li>
+          <li>渔获直接进背包</li>
+        </ul>
+      </div>
+    <span class="card-cta">进入钓鱼详情 →</span>
+    </a>
+  </div>
+</section>
+
+
+
+<section id="farm" class="section dark">
+  <div class="section-head">
+    <span class="tag">04 / 农业系统</span>
+    <h2>耕地系统展示</h2>
+    <p>翻土、播种、浇水、施肥，作物会随时间进入四个阶段；收获的菜可以直接拿去厨房。</p>
+  </div>
+  <a class="feature" href="planting.html">
+    <div class="feature-media"><img src="assets/img/farm.jpg" alt="农田"></div>
+    <div class="feature-body">
+      <h3>种植与作物</h3>
+      <p>13 种作物，四种生长阶段，部分作物可以多次收获。</p>
+      <ul class="dots">
+        <li>耕地、播种、浇水、施肥</li>
+        <li>四阶段生长与缺水提示</li>
+        <li>收获后进入背包与厨房</li>
+      </ul>
+      <span class="card-cta">进入农业系统 →</span>
+    </div>
+  </a>
+</section>
+
+<section id="tech" class="section">
+  <div class="section-head">
+    <span class="tag">05 / NPC 系统</span>
+    <h2>NPC 不只是背台词</h2>
+    <p>每个 NPC 有自己的人设、职业和记忆，对话由本地逻辑与 DeepSeek API 共同生成。</p>
+  </div>
+  <a class="feature" href="npc.html">
+    <div class="feature-media"><video src="assets/video/npc_dialog.mp4?v=20261111d" autoplay muted loop playsinline preload="metadata"></video></div>
+    <div class="feature-body">
+      <h3>NPC 系统</h3>
+      <p>对话、表情立绘与自由问答，回答会先经过本地逻辑，再交给模型组织语言。</p>
+      <ul class="dots">
+        <li>人设提示词与上下文裁剪</li>
+        <li>请求失败时的本地兜底</li>
+        <li>延迟与调用成本控制</li>
+      </ul>
+      <span class="card-cta">进入 NPC 系统 →</span>
+    </div>
+  </a>
+</section>
+
+<section id="extras" class="section">
+  <div class="section-head">
+    <span class="tag">06 / 其余功能</span>
+    <h2>没展开的那些细节</h2>
+    <p>影子、睡觉、存档、NPC 心情、商店和设置，不上主舞台，但都在实际跑。</p>
+  </div>
+  <a class="feature" href="extras.html">
+    <div class="feature-media"><img src="assets/img/extra_emote.jpg" alt="NPC 心情气泡"></div>
+    <div class="feature-body">
+      <h3>其余功能</h3>
+      <p>六个不占主线、但每天都会用到的系统，单独整理成一页。</p>
+      <ul class="dots">
+        <li>影子系统：影子随游戏内时间转向、变长</li>
+        <li>睡觉：黑屏过夜，醒来早上七点并自动存档</li>
+        <li>存档：4 个槽位、缩略图与覆盖前备份</li>
+        <li>NPC 心情气泡：30 种表情，按权重随机</li>
+        <li>商店收购：渔获按四档定价</li>
+        <li>设置：音效、音乐、画面、亮度</li>
+      </ul>
+      <span class="card-cta">查看细节 →</span>
+    </div>
+  </a>
+</section>
+
+<section id="about" class="section dark about">
+  <div class="section-head">
+    <span class="tag">07 / 关于</span>
+    <h2>自然幻想 Demo</h2>
+    <p>湖北工业大学 · 工业技术学院 · 数字媒体艺术</p>
+    <p class="contact">
+      <a href="tel:15207100326">电话 15207100326</a>
+      <span>·</span>
+      <a href="mailto:2581386241@qq.com">邮箱 2581386241@qq.com</a>
+      <span>·</span>
+      <span>WX S15207100326</span>
+    </p>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>© 2026 自然幻想 · 2027 届毕业设计作品</p>
+</footer>
+
+<div class="lightbox" id="lightbox" hidden>
+  <div class="lightbox-panel">
+    <button class="lightbox-close" aria-label="关闭">×</button>
+    <video id="lightbox-video" controls playsinline></video>
+    <div class="lightbox-cap" id="lightbox-cap"></div>
+  </div>
+</div>
+<script src="assets/video-modal.js?v=20261111m"></script>
+<div class="imagelightbox" id="imagelightbox" hidden>
+  <button class="lightbox-close" aria-label="关闭">×</button>
+  <div class="imagelightbox-panel">
+    <img id="imagelightbox-img" alt="">
+    <div class="lightbox-cap" id="imagelightbox-cap"></div>
+  </div>
+</div>
+<script src="assets/image-modal.js"></script>
+</body>
+</html>
+
+
+
+
+

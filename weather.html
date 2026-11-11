@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>天气与时间 · 自然幻想</title>
+<link rel="stylesheet" href="assets/style.css?v=60">
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a class="logo" href="index.html">自然幻想<span>NATURAL FANTASY</span></a>
+    <nav class="links">
+      <a href="index.html#world">场景</a>
+      <a href="combat.html">战斗</a>
+      <a href="index.html#systems">休闲</a>
+      <a href="planting.html">农业</a>
+      <a href="npc.html">NPC</a>
+      <a href="index.html#about">关于</a>
+    </nav>
+  </div>
+</header>
+
+<section class="page-head">
+  <div class="page-head-inner">
+    <span class="tag">场景 / 天气</span>
+    <h1>天气与时间</h1>
+    <p>同一个镇子，按游戏内时钟换光照、环境声和 BGM；天气自己会变，晴、多云、雨各有各的色温。</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <span class="tag">实机</span>
+    <h2>从上午到深夜</h2>
+    <p>同一地点，09:18 到 23:30 的光照、温度与天气窗变化。</p>
+  </div>
+  <div class="video-grid one">
+    <article class="vcard">
+      <video src="assets/video/weather_system.mp4?v=20261111a" autoplay muted loop playsinline preload="metadata"></video>
+      <div class="vcard-body"><h3>天气演示</h3><p>时间推进时，天空、色温、灯光的亮度一起变化；右上角的天气窗同步显示当前时段与温度。</p></div>
+    </article>
+  </div>
+</section>
+
+<section class="section dark">
+  <div class="split">
+    <div class="split-media"><img src="assets/img/town_night_crop.jpg" alt="深夜的城镇街道"></div>
+    <div class="split-body">
+      <span class="tag">时间</span>
+      <h2>一天从清晨走到深夜</h2>
+      <ul class="dots">
+        <li>清晨 / 上午 / 下午 / 夕阳 / 夜晚，五套天空与光照</li>
+        <li>太阳角度、月光、路灯和窗户的灯各自独立（月光 20:00 淡入、05:00 后淡出）</li>
+        <li>城镇 BGM 分清晨 / 下午 / 晚上三段切换，环境声更细</li>
+        <li>天气窗显示日期、时间与当前温度</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <span class="tag">天气</span>
+    <h2>晴、多云、雨，自己会换</h2>
+    <p>每 60–180 秒随机切换一次；入夜后自动进入「夜晚 / 深夜」。</p>
+  </div>
+  <div class="yield-rules">
+    <div><span>晴</span><b>18–28℃</b></div>
+    <div><span>多云</span><b>14–24℃</b></div>
+    <div><span>小雨</span><b>12–20℃</b></div>
+    <div><span>大雨</span><b>10–18℃</b></div>
+    <div><span>暴雨</span><b>8–16℃</b></div>
+    <div><span>夜晚 / 深夜</span><b>4–16℃</b></div>
+  </div>
+  <p class="yield-foot">雨天叠加雨幕与云影，夜里加月光和路灯的辉光；晴天、阴天、雨天的色温和环境声都不一样。</p>
+</section>
+
+<section class="section essay">
+  <div class="essay-inner">
+    <span class="tag">设计思路</span>
+    <h2>让同一个地方，值得多来几次</h2>
+    <div class="essay-body">
+      <p>很多游戏的天气只是背景板：晴天和雨天换一张贴图，玩家不会多看一眼。另一种做法是把它做成数值压力——下雨减产、夜里必须回家，用惩罚逼玩家在意。这两种我们都不想要。天气的目标只有一个：让同一个地方，隔一段时间再来，气质不一样。</p>
+      <p>所以先把时间做细。清晨、上午、下午、夕阳、夜晚五套天空，太阳角度、月光强度、路灯和窗户的亮灯各自独立。城镇 BGM 只分清晨、下午、晚上三段，边界在 5:00、12:00、18:00；切换用 2 秒淡入、1.2 秒淡出、中间留 0.4 秒空隙——宁可慢一点，也不要突然换歌。</p>
+      <p>温度做了两层：基准温度按天气取值，再叠一条 ±4℃ 的昼夜曲线，15:00 最热、凌晨最冷。这样 23:30 的晴天不会是 28℃，玩家不用看说明也知道是深夜。天气本身每 60–180 秒随机换一次，晴、多云、小雨、大雨、暴雨各有自己的温度区间与色温；入夜后自动切到“夜晚 / 深夜”，不会出现“深夜还挂着大太阳”的割裂。</p>
+      <p>取舍也很明确：天气不参与玩法。下雨不会让作物长得更快，也不会让鱼更好钓。一旦把天气和收益绑定，玩家就得看天气安排作息，休闲玩法会变成打卡。砍掉这条线之后，玩家不需要为天气做任何准备，但会记得“那个镇子晚上很安静”。对这样一个展示型 Demo，这比多一条数值更有价值。</p>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <p><a href="index.html">← 返回首页</a> · © 2026 自然幻想</p>
+</footer>
+
+<div class="lightbox" id="lightbox" hidden>
+  <div class="lightbox-panel">
+    <button class="lightbox-close" aria-label="关闭">×</button>
+    <video id="lightbox-video" controls playsinline></video>
+    <div class="lightbox-cap" id="lightbox-cap"></div>
+  </div>
+</div>
+<script src="assets/video-modal.js?v=20261111m"></script>
+</body>
+</html>
