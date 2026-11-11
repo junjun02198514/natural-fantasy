@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>自然幻想 · 世界与生活</title>
-<link rel="stylesheet" href="assets/style.css?v=61">
+<link rel="stylesheet" href="assets/style.css?v=63">
 </head>
 <body>
 
@@ -36,6 +36,19 @@
     </div>
   </div>
   <div class="hero-scroll">向下滚动</div>
+</section>
+
+<section id="fullplay" class="section">
+  <div class="section-head">
+    <span class="tag">00 / 全流程视频</span>
+    <h2>全流程介绍</h2>
+    <p>12 分 35 秒，从清晨到交付的完整流程；具体系统细节，见下方各页。</p>
+  </div>
+  <div class="video-frame" id="fullplayBox" data-bvid="BV1mYW26zEgY" role="button" tabindex="0" aria-label="播放全流程视频">
+    <img src="assets/img/fullplay_cover.jpg?v=2" alt="自然幻想 Demo 2 全流程演示封面">
+    <span class="video-play" aria-hidden="true"></span>
+  </div>
+  <p class="world-note">1080p 60 帧；播放器加载慢时，可直接<a href="https://www.bilibili.com/video/BV1mYW26zEgY/" target="_blank" rel="noopener">在 B 站打开</a>。</p>
 </section>
 
 <section id="world" class="section">
@@ -253,6 +266,22 @@
   </div>
 </div>
 <script src="assets/image-modal.js"></script>
+<script>
+(function () {
+  var box = document.getElementById('fullplayBox');
+  if (!box) return;
+  function play() {
+    var bv = box.getAttribute('data-bvid');
+    box.innerHTML = '<iframe src="https://player.bilibili.com/player.html?bvid=' + bv +
+      '&page=1&high_quality=1&danmaku=0&autoplay=1" title="自然幻想 Demo 2 全流程演示" scrolling="no" frameborder="0" allowfullscreen="true"></iframe>';
+    box.style.cursor = 'default';
+  }
+  box.addEventListener('click', play);
+  box.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); play(); }
+  });
+})();
+</script>
 </body>
 </html>
 
