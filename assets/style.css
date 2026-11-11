@@ -138,6 +138,9 @@ h2{font-size:clamp(28px,3.4vw,42px);line-height:1.25;letter-spacing:.02em}
 .contact span{margin:0 8px;color:#5a5a60}
 .contact a:hover{color:var(--red)}
 .credits{margin-top:16px;color:var(--gold);letter-spacing:.2em}
+.back-fab{position:fixed;left:24px;bottom:24px;z-index:60;display:inline-flex;align-items:center;gap:8px;padding:10px 16px;background:rgba(18,18,20,.92);border:1px solid var(--line);color:var(--text);font-size:13px;letter-spacing:.06em;backdrop-filter:blur(8px);transition:border-color .2s,color .2s}
+.back-fab:hover{border-color:var(--red);color:var(--red)}
+@media (max-width:560px){.back-fab{left:14px;bottom:14px;padding:9px 13px;font-size:12px}}
 .footer{border-top:1px solid var(--line);padding:28px 24px;text-align:center;color:#6f6a62;font-size:12px;letter-spacing:.12em}
 
 .lightbox{position:fixed;inset:0;z-index:100;background:rgba(0,0,0,.9);display:flex;align-items:center;justify-content:center;padding:24px}
