@@ -79,6 +79,12 @@ h2{font-size:clamp(28px,3.4vw,42px);line-height:1.25;letter-spacing:.02em}
 .world-note{margin-top:16px;font-size:13px;color:#8f887d;line-height:1.9}
 .world-note a{color:var(--red);border-bottom:1px solid rgba(226,58,46,.45);padding-bottom:1px;transition:color .2s,border-color .2s}
 .world-note a:hover{color:#ff6a5d;border-color:#ff6a5d}
+.stat-bar{display:flex;align-items:center;gap:16px;margin-top:14px;font-size:13px;color:#8f887d}
+.stat-num{color:#e6e0d6;font-variant-numeric:tabular-nums}
+.like-btn{display:inline-flex;align-items:center;gap:7px;background:transparent;border:1px solid var(--line);color:#cfc9bf;padding:6px 14px;border-radius:999px;cursor:pointer;font:inherit;font-size:13px;transition:border-color .2s,color .2s,background .2s}
+.like-btn:hover{border-color:var(--red);color:#fff}
+.like-btn .heart{color:var(--red);font-size:15px;line-height:1}
+.like-btn[aria-pressed="true"]{border-color:var(--red);color:#fff;background:rgba(226,58,46,.12);cursor:default}
 .shot:hover img{transform:scale(1.03)}
 .shot figcaption{position:absolute;left:0;right:0;bottom:0;padding:14px 16px;font-size:13px;color:#e6e0d6;background:linear-gradient(0deg,rgba(0,0,0,.8),transparent)}
 

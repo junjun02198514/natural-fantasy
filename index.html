@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>自然幻想 · 世界与生活</title>
-<link rel="stylesheet" href="assets/style.css?v=64">
+<link rel="stylesheet" href="assets/style.css?v=65">
 </head>
 <body>
 
@@ -49,6 +49,12 @@
     <span class="video-play" aria-hidden="true"></span>
   </div>
   <p class="world-note">1080p 60 帧；播放器加载慢时，可直接<a href="https://www.bilibili.com/video/BV1mYW26zEgY/" target="_blank" rel="noopener">在 B 站打开 ↗</a>。</p>
+  <div class="stat-bar">
+    <span class="stat">浏览 <span class="stat-num" id="viewCount">—</span></span>
+    <button class="like-btn" id="likeBtn" type="button" aria-pressed="false">
+      <span class="heart">♡</span><span class="stat-num" id="likeCount">—</span>
+    </button>
+  </div>
 </section>
 
 <section id="world" class="section">
@@ -266,6 +272,7 @@
   </div>
 </div>
 <script src="assets/image-modal.js"></script>
+<script src="assets/stats.js?v=1"></script>
 <script>
 (function () {
   var box = document.getElementById('fullplayBox');
