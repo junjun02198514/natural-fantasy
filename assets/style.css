@@ -84,7 +84,13 @@ h2{font-size:clamp(28px,3.4vw,42px);line-height:1.25;letter-spacing:.02em}
 .like-btn{display:inline-flex;align-items:center;gap:7px;background:transparent;border:1px solid var(--line);color:#cfc9bf;padding:6px 14px;border-radius:999px;cursor:pointer;font:inherit;font-size:13px;transition:border-color .2s,color .2s,background .2s}
 .like-btn:hover{border-color:var(--red);color:#fff}
 .like-btn .heart{color:var(--red);font-size:15px;line-height:1}
-.like-btn[aria-pressed="true"]{border-color:var(--red);color:#fff;background:rgba(226,58,46,.12);cursor:default}
+.like-btn[aria-pressed=true]{border-color:var(--red);color:#fff;background:rgba(226,58,46,.12);cursor:default}
+.nav-stats{display:flex;align-items:center;gap:12px;font-size:12.5px;color:#8f887d;white-space:nowrap}
+.nav-stats .stat-num{color:#e6e0d6}
+.nav-stats .like-btn{padding:4px 10px;font-size:12.5px;gap:6px}
+.nav-stats .like-btn .heart{font-size:14px}
+@media(max-width:900px){.nav-stats .stat{display:none}.nav-stats{gap:8px}}
+@media(max-width:680px){.links{gap:16px;font-size:13px}}
 .shot:hover img{transform:scale(1.03)}
 .shot figcaption{position:absolute;left:0;right:0;bottom:0;padding:14px 16px;font-size:13px;color:#e6e0d6;background:linear-gradient(0deg,rgba(0,0,0,.8),transparent)}
 
