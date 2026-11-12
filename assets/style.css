@@ -77,6 +77,8 @@ h2{font-size:clamp(28px,3.4vw,42px);line-height:1.25;letter-spacing:.02em}
 .play-badge{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:flex;align-items:center;gap:9px;padding:10px 16px;background:rgba(20,15,12,.74);border:1px solid rgba(255,255,255,.28);color:#fff;font-size:13px;letter-spacing:.1em;pointer-events:none}
 .play-badge::before{content:"";width:0;height:0;border-left:10px solid #fff;border-top:6px solid transparent;border-bottom:6px solid transparent}
 .world-note{margin-top:16px;font-size:13px;color:#8f887d;line-height:1.9}
+.world-note a{color:var(--red);border-bottom:1px solid rgba(226,58,46,.45);padding-bottom:1px;transition:color .2s,border-color .2s}
+.world-note a:hover{color:#ff6a5d;border-color:#ff6a5d}
 .shot:hover img{transform:scale(1.03)}
 .shot figcaption{position:absolute;left:0;right:0;bottom:0;padding:14px 16px;font-size:13px;color:#e6e0d6;background:linear-gradient(0deg,rgba(0,0,0,.8),transparent)}
 
